@@ -1,0 +1,12 @@
+#### 学习任务
+- [ ] mysql
+- [ ] laravel
+- [ ] python/golang
+- [x] markdown
+- [x] git
+- [ ] flex布局
+- [ ] linux命令
+- [ ] vue
+- [ ] javascript
+- [ ] typescript
+- [ ] redis
