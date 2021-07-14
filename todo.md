@@ -4,7 +4,7 @@
 - [ ] python/golang
 - [x] markdown
 - [x] git
-- [ ] flex布局
+- [x] flex布局
 - [ ] linux命令
 - [ ] vue
 - [ ] javascript
