@@ -68,3 +68,11 @@ make && make install`
     crontab -e #(可以定时每三分钟同步一次文件)加入下方内容
     */3 * * * * /usr/bin/rsync -avzP --delete --progress --exclude=排除的不需同步目录 --password-file=/etc/rsyncd.password root@100.xxx.xxx.1::backup /www/wwwroot/web > /dev/null 2>&1
    ```
+   从命令行排除文件
+   ```sh
+   rsync -aAXhv --exclude={"/var/cache","/var/tmp"} /var /home/adrian/var
+   ```
+   排除文件和目录列表（创建一个名为“excluded.list”的文件）
+   ```sh
+   rsync -aAXhv --exclude-from=excluded.list / /mnt/backup
+   ```
