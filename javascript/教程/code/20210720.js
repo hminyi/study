@@ -25,8 +25,7 @@ console.log(parseInt('x12px')); // NaN
 console.log(parseInt('+1')); // 1
 console.log(parseInt('0x12')); // 18
 
-console.log(parseInt(0.0000008));
+console.log(parseInt(0.0000008)); // 8
 
-console.log(parseFloat('314e-2'));
-
-console.log(parseFloat('\t\v\r12.34\n '));
+console.log(parseFloat('314e-2')); // 3.14
+console.log(parseFloat('\t\v\r12.34\n ')); // 12.34
