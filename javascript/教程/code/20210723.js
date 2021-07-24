@@ -50,3 +50,60 @@ console.log(f3.name) // 'myName'
 // length 属性
 function f(a, b) {}
 console.log(f.length);
+
+
+// 闭包
+function createIncrementor(start) {
+    return function () {
+        return start++;
+    }
+}
+var inc = createIncrementor(5);
+console.log(inc());
+console.log(inc());
+console.log(inc());
+
+// 封装
+function Person(name) {
+    var _age;
+    function setAge(n) {
+        _age = n;
+    }
+    function getAge() {
+        return _age;
+    }
+
+    return {
+        name: name,
+        getAge: getAge,
+        setAge: setAge
+    }
+}
+var p1 = Person('张三');
+console.log(p1);
+p1.setAge(25);
+console.log(p1.getAge());
+
+// 函数立即执行
+(function() {
+    console.log(123);
+})();
+(function() {
+    console.log(123);
+}());
+
+var i = function() {
+    console.log(435);
+}();
+true && function() {
+    console.log(345);
+}();
+0, function() {
+    console.log(789);
+}()
+
+// eval
+eval('var a = 1;');
+console.log(a); // 1
+
+eval('3x'); // Uncaught SyntaxError: Invalid or unexpected token
