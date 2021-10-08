@@ -72,6 +72,11 @@ make && make install`
    ```sh
    rsync -aAXhv --exclude={"/var/cache","/var/tmp"} /var /home/adrian/var
    ```
+
+   例如
+   ```sh
+   /usr/bin/rsync -avzP --delete  --progress --exclude 'data/runtime/*' --exclude 'public/api/upload/*' --exclude 'public/upload/*' --password-file=/etc/rsyncd.password root@116.62.127.36::backup /www/wwwroot/control.gugesport.com
+   ```
    排除文件和目录列表（创建一个名为“excluded.list”的文件）
    ```sh
    rsync -aAXhv --exclude-from=excluded.list / /mnt/backup
